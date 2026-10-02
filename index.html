@@ -66,6 +66,18 @@ h2{font-size:clamp(22px,6.2vw,28px);font-weight:900;line-height:1.2;margin-top:4
 .alert-dark{background:var(--ink);color:#fff;display:flex;gap:16px;align-items:center}
 .alert-dark .big{font-size:64px;font-weight:900;line-height:1;color:#ff5a4f;flex:0 0 auto}
 .alert-dark p{color:#e3d9d6}
+.alert-star{background:var(--card);border:2px solid #f2b705}
+.catalog-img{width:min(240px,66vw);height:auto;margin:16px auto 0;border-radius:22px;border:6px solid var(--ink);box-shadow:0 12px 30px rgba(0,0,0,.18)}
+
+/* FAQ */
+.faq{display:grid;gap:10px;margin-top:16px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+.faq summary{font-weight:800;font-size:16px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--red);font-weight:900;font-size:20px;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin-top:8px;font-size:15px;color:var(--muted)}
+.faq details ol{margin:10px 0 0 20px;display:grid;gap:6px;font-size:15px;color:var(--muted)}
 
 main{padding-bottom:calc(40px + env(safe-area-inset-bottom))}
 
@@ -102,6 +114,7 @@ main{padding-bottom:calc(40px + env(safe-area-inset-bottom))}
     <a href="#tv">📺 Smart TV</a>
     <a href="#login">🔑 Login</a>
     <a href="#avisos">⚠️ Avisos</a>
+    <a href="#faq">❓ Dúvidas</a>
   </div>
 </nav>
 
@@ -183,6 +196,27 @@ main{padding-bottom:calc(40px + env(safe-area-inset-bottom))}
         <h3>aparelhos por conta, no máximo</h3>
         <p>O limite soma <b>TVs e celulares</b>. Exemplo: 2 TVs + 2 celulares.</p>
       </div>
+    </div>
+    <div class="alert alert-star">
+      <h3>✨ Filmes e séries com estrela</h3>
+      <p>Filmes e séries com a <b>estrela</b> na capa <b>não estão disponíveis</b>.</p>
+      <img class="catalog-img" src="img/catalogo.jpeg" alt="Catálogo do app Informac TV com a estrela dourada no canto das capas de filmes indisponíveis" width="590" height="1280" loading="lazy">
+    </div>
+  </section>
+
+  <section id="faq">
+    <p class="kicker">Dúvidas frequentes</p>
+    <h2>Problemas com login</h2>
+    <div class="faq">
+      <details>
+        <summary>Aparece "Erro na autenticação". O que faço?</summary>
+        <ol>
+          <li>Confirme se seu <b>usuário e senha</b> estão digitados corretamente.</li>
+          <li>Tente fazer login em <b>outro dispositivo</b> (TV ou celular).</li>
+          <li>Confirme se o app está <b>atualizado</b> na loja da sua TV ou celular.</li>
+          <li><b>Desinstale e instale</b> o app novamente.</li>
+        </ol>
+      </details>
     </div>
   </section>
 
